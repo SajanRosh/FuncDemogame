@@ -30,13 +30,17 @@ public class Function1
         var response = req.CreateResponse(HttpStatusCode.OK);
         //AddCorsHeaders(response);
         response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
-        await response.WriteStringAsync("Hello from Function1");
+
+        string favWrestler = Environment.GetEnvironmentVariable("REACT_APP_FAV_WRESTLER") ?? "Not Found sorry";
+        _logger.LogInformation($"Favorite Wrestler from react: {favWrestler}");
+
+        await response.WriteStringAsync($"Hello from Function1, Favorite Wrestler: {favWrestler}");
         return response;
     }
 
     private static void AddCorsHeaders(HttpResponseData response)
     {
-        // Only for local/dev — restrict origins in production!
+        // Only for local/dev ï¿½ restrict origins in production!
         response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
         response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Authorization");
