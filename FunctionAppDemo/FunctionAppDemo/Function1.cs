@@ -28,7 +28,7 @@ public class Function1
 
         // Normal request handling
         var response = req.CreateResponse(HttpStatusCode.OK);
-        AddCorsHeaders(response);
+        //AddCorsHeaders(response);
         response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
         await response.WriteStringAsync("Hello from Function1");
         return response;
