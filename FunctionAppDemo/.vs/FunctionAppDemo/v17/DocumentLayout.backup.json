@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\funcdemo\\FunctionAppDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BF45C3F-B2DF-45DF-8120-44FA10B0ECFD}|FunctionAppDemo\\FunctionAppDemo.csproj|c:\\users\\hp\\desktop\\funcdemo\\functionappdemo\\functionappdemo\\function1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BF45C3F-B2DF-45DF-8120-44FA10B0ECFD}|FunctionAppDemo\\FunctionAppDemo.csproj|solutionrelative:functionappdemo\\function1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BF45C3F-B2DF-45DF-8120-44FA10B0ECFD}|FunctionAppDemo\\FunctionAppDemo.csproj|c:\\users\\hp\\desktop\\funcdemo\\functionappdemo\\functionappdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BF45C3F-B2DF-45DF-8120-44FA10B0ECFD}|FunctionAppDemo\\FunctionAppDemo.csproj|solutionrelative:functionappdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\funcdemo\\FunctionAppDemo\\FunctionAppDemo\\Program.cs",
+              "RelativeDocumentMoniker": "FunctionAppDemo\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\funcdemo\\FunctionAppDemo\\FunctionAppDemo\\Program.cs",
+              "RelativeToolTip": "FunctionAppDemo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T03:11:06.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Function1.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\funcdemo\\FunctionAppDemo\\FunctionAppDemo\\Function1.cs",
+              "RelativeDocumentMoniker": "FunctionAppDemo\\Function1.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\funcdemo\\FunctionAppDemo\\FunctionAppDemo\\Function1.cs",
+              "RelativeToolTip": "FunctionAppDemo\\Function1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T03:10:36.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
