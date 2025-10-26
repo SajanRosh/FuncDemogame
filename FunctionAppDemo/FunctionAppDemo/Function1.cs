@@ -22,7 +22,7 @@ public class Function1
         if (string.Equals(req.Method, "OPTIONS", StringComparison.OrdinalIgnoreCase))
         {
             var preflight = req.CreateResponse(HttpStatusCode.OK);
-            AddCorsHeaders(preflight);
+           // AddCorsHeaders(preflight);
             return preflight;
         }
 
