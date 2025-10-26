@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import axios from 'axios'
 
 function App() {
-  const url = "http://localhost:7243/api/Function1";
+  const url = "/api/Function1";
   useEffect(() => {
     axios.get(url).then(res => {
       console.log(res.data)
