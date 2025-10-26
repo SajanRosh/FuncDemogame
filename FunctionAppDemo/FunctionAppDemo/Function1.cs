@@ -1,23 +1,46 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Net;
+using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
-
-namespace FunctionAppDemo;
 
 public class Function1
 {
-    private readonly ILogger<Function1> _logger;
-
-    public Function1(ILogger<Function1> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger _logger;
+    public Function1(ILoggerFactory loggerFactory) => _logger = loggerFactory.CreateLogger<Function1>();
 
     [Function("Function1")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
+    public async Task<HttpResponseData> Run(
+        [HttpTrigger(AuthorizationLevel.Function, "get", "post", "options", Route = null)]
+        HttpRequestData req,
+        FunctionContext context)
     {
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult("Welcome to Azure Functions!");
+        _logger.LogInformation("Function1 processed a request.");
+
+        // Handle preflight
+        if (string.Equals(req.Method, "OPTIONS", StringComparison.OrdinalIgnoreCase))
+        {
+            var preflight = req.CreateResponse(HttpStatusCode.OK);
+            AddCorsHeaders(preflight);
+            return preflight;
+        }
+
+        // Normal request handling
+        var response = req.CreateResponse(HttpStatusCode.OK);
+        AddCorsHeaders(response);
+        response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+        await response.WriteStringAsync("Hello from Function1");
+        return response;
+    }
+
+    private static void AddCorsHeaders(HttpResponseData response)
+    {
+        // Only for local/dev — restrict origins in production!
+        response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
+        response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        // If you need credentials uncomment:
+        // response.Headers.Add("Access-Control-Allow-Credentials", "true");
     }
 }
