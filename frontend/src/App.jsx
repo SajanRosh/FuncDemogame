@@ -11,7 +11,7 @@ function App() {
     })
   }, [])
   const favWrestler = process.env.REACT_APP_FAV_WRESTLER;
-  console.log("Favorite Wrestler from react try:", favWrestler);
+  console.log("Favorite Wrestler from react game,....:", favWrestler);
   return (
     <div className="App">
       <header className="App-header">
