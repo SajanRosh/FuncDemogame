@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   //     console.log(res.data);
   //   });
   // }, []);
-  const favWrestler = process.env.REACT_APP_FAV_WRESTLER;
+  //const favWrestler = process.env.REACT_APP_FAV_WRESTLER;
   //console.log("Favorite Wrestler from react game,....:", favWrestler);
 
   const handleSend = async () => {
